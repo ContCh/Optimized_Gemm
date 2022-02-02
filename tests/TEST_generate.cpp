@@ -29,7 +29,6 @@ void testGenArray(int rows, int cols) {
 }
 
 
-
 int main() {
     int rows = 12, cols = 8;
 
