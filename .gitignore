@@ -1,0 +1,11 @@
+*.o
+*.ii
+*.s
+**/.DS_Store
+?
+??
+*binary*
+/.idea/
+cmake-build-debug/
+cmake-build-release/
+cmake-install/

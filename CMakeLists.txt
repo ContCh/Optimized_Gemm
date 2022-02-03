@@ -6,5 +6,5 @@ project(Optimized_GEMM)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
-set(CPPFILE "${PROJECT_SOURCE_DIR}/tests/TEST_clock.cpp")
+set(CPPFILE "${PROJECT_SOURCE_DIR}/tests/TEST_clocks.cpp")
 add_executable(run_test ${CPPFILE})
