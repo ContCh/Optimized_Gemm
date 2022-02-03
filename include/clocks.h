@@ -1,8 +1,10 @@
 #include <chrono>
 
-
-
-using accuracy_clock = std::chrono::high_resolution_clock;
+/* Use clock_start(), set start time, and use clock_end(unit) compute duration.
+ * Here unit is time unit, listed by TimeUnit.
+ * NANOSEC -> ns, MICROSEC -> us, MILLISEC -> ms
+ * clock_end(SECOND) will return the value, how many seconds are costed.
+ */
 
 
 enum class TimeUnit {
@@ -11,6 +13,8 @@ enum class TimeUnit {
     MILLISEC,
     SECOND,
 };
+
+using accuracy_clock = std::chrono::high_resolution_clock;
 
 #define TIME_FORMAT(unit) std::chrono::duration<int, unit>
 #define DURATION_CAST(dura, time_format) std::chrono::duration_cast<time_format>(dura)
@@ -48,5 +52,5 @@ struct DClock {
 accuracy_clock::time_point DClock::cursor;
 
 
-#define clock_start() DClock::start()
+#define clock_start()   DClock::start()
 #define clock_end(unit) DClock::end(TimeUnit::unit)

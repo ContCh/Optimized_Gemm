@@ -62,7 +62,7 @@ void genFloatPointKernel(DataType* gen_array, int length) {
     }
 }
 
-
+// Array generation randomly
 template <typename DataType>
 DataType* genArray(int num_elems) {
     DataType* pointer = new DataType[num_elems];
