@@ -1,3 +1,7 @@
+#ifndef MATRIX_GENERATION_
+#define MATRIX_GENERATION_
+
+
 #include <cstdlib>
 #include <ctime>
 #include <cmath>
@@ -75,3 +79,6 @@ DataType* genArray(int num_elems) {
     }
     return pointer;
 }
+
+
+#endif  // MATRIX_GENERATION_

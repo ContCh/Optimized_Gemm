@@ -4,9 +4,9 @@
 #include "generate.h"
 #include "matrix_mul_base.h"
 
-#define Row   400
-#define Depth 600
-#define Col   500
+#define Row   600
+#define Depth 800
+#define Col   600
 
 
 template <typename DataType>

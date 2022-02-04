@@ -1,3 +1,6 @@
+#ifndef CLOCKS_H
+#define CLOCKS_H
+
 #include <chrono>
 
 /* Use clock_start(), set start time, and use clock_end(unit) compute duration.
@@ -54,3 +57,6 @@ accuracy_clock::time_point DClock::cursor;
 
 #define clock_start()   DClock::start()
 #define clock_end(unit) DClock::end(TimeUnit::unit)
+
+
+#endif // CLOCKS_H
