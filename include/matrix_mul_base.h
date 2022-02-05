@@ -27,4 +27,17 @@ void bmMatrixMultiplication(DataType* lhs, DataType* rhs, ResultDataType* result
     }
 }
 
+template <typename DataType>
+bool benchmarkCompare(DataType* arr_base, DataType* arr_test,
+                      int rows, int cols, double threshold) {
+    for (int idx = 0; idx < rows * cols; idx++) {
+        if (std::abs(arr_base[idx] - arr_test[idx]) > threshold) {
+            std::cout << '(' << (idx / cols) << ", " << (idx % cols) << ") diff-> "
+                      << arr_base[idx] << " while get " << arr_test[idx] << std::endl;
+            return false;
+        }
+    }
+    return true;
+}
+
 #endif //PROJECT_MATRIX_MUL_BASE_H
