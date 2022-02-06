@@ -23,7 +23,7 @@ int main() {
     std::cout << "Cost " << dura << " us." << std::endl;
 
     float* bm_result = new float[Row * Col];
-    memset(result, 0, Row * Col * sizeof(float));
+    memset(bm_result, 0, Row * Col * sizeof(float));
     bmMatrixMultiplication(matrix_left, matrix_right, bm_result,
                            Row, Col, Depth);
     

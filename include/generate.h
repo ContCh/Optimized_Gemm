@@ -80,5 +80,13 @@ DataType* genArray(int num_elems) {
     return pointer;
 }
 
+#include <string.h>
+template <typename DataType>
+DataType* genZeroArray(int num_elems) {
+    DataType* pointer = new DataType[num_elems];
+    memset(pointer, 0, num_elems * sizeof(DataType));
+    return pointer;
+}
+
 
 #endif  // MATRIX_GENERATION_
